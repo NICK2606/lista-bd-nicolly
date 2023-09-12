@@ -24,3 +24,8 @@ inner join livros
 where autores.id = livros.autor_id 
 group by nome;
 
+select curso, count(nome) as número_de_alunos 
+from matriculas 
+inner join alunos on matriculas.aluno_id=alunos.id 
+group by curso;
+
