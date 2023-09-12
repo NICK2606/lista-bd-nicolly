@@ -36,3 +36,9 @@ group by produto;
 select produto, SUM(receita) as receita_total 
 from vendas 
 group by produto having receita_total >'10.000';
+
+select nome, count(titulo) as número_de_livros 
+from autores 
+inner join livros 
+where autores.id = livros.autor_id 
+group by nome having número_de_livros >2;
