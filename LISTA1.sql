@@ -86,3 +86,8 @@ select nome, count(curso) as número_de_matriculas
 from alunos 
 inner join matriculas on alunos.id = matriculas.aluno_id 
 group by nome;
+
+with número_de_produtos as (
+    select produto, count(*) as número from vendas group by produto
+)
+select produto, número from número_de_produtos where número = (select max(número) from número_de_produtos);
