@@ -42,3 +42,7 @@ from autores
 inner join livros 
 where autores.id = livros.autor_id 
 group by nome having número_de_livros >2;
+
+select titulo, nome 
+from livros 
+inner join autores on livros.autor_id=autores.id;
