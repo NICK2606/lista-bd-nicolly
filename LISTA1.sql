@@ -82,3 +82,7 @@ from vendas
 group by produto 
 order by receita_total asc limit 1;
 
+select nome, count(curso) as número_de_matriculas 
+from alunos 
+inner join matriculas on alunos.id = matriculas.aluno_id 
+group by nome;
