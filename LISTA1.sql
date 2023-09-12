@@ -76,3 +76,9 @@ where quantidadelivros = (
     select max(quantidadelivros) 
     from contagemlivros
 );
+
+select produto, sum(receita) as receita_total 
+from vendas 
+group by produto 
+order by receita_total asc limit 1;
+
