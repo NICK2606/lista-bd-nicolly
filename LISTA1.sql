@@ -50,3 +50,8 @@ inner join autores on livros.autor_id=autores.id;
 select nome, curso 
 from alunos 
 inner join matriculas on alunos.id = matriculas.aluno_id; 
+
+select nome, titulo 
+from autores 
+left join livros on autores.id = livros.autor_id;
+
