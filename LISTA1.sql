@@ -29,3 +29,6 @@ from matriculas
 inner join alunos on matriculas.aluno_id=alunos.id 
 group by curso;
 
+select produto, AVG(receita) as receita_media 
+from vendas 
+group by produto;
